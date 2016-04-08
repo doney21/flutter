@@ -2,10 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root 'pages#index' 
 
-  get '/home' => 'pages#home'
-
-  get '/profile' => 'pages#profile'
-
+ # Define Routes for Pages
+  get '/home' => 'pages#home' # override default routes.
+  get '/user/:id' => 'pages#profile'
   get '/explore' => 'pages#explore'
 
   # The priority is based upon order of creation: first created -> highest priority.
